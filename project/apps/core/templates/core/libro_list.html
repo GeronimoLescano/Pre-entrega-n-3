@@ -2,6 +2,29 @@
 
 
 {% block contenido %}
+<style>
+    body {
+        background-color: black; 
+        margin-top: 100px; 
+    }
+
+    
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid #f9f7fa;
+        padding: 8px;
+        text-align: left;
+        color: #faf4f4;
+    }
+</style>
+
+
+
+
     <h1>Libros</h1>
     <table border="1">
         <thead>
@@ -23,5 +46,5 @@
         </tbody>
     </table>
 
-    <a href="{% url 'index' %}"><button>Volver al inicio</button></a>
+    
 {% endblock contenido %}

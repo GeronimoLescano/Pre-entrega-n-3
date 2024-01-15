@@ -1,7 +1,28 @@
+
+
 {% extends 'core/base.html' %}
 
-
 {% block contenido %}
+    <style>
+        body {
+            background-color: black; 
+            margin-top: 100px; 
+        }
+
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #f9f7fa;
+            padding: 8px;
+            text-align: left;
+            color: #faf4f4;
+        }
+    </style>
+
     <table border="1">
         <thead>
             <tr>
@@ -10,17 +31,14 @@
             </tr>
         </thead>
         <tbody>
-            {% for sucursal in sucursales  %}
-            <tr>
-                <td>{{sucursal.libro}}</td>
-                <td>{{sucursal.sucursales}}</td>
-            </tr>
+            {% for sucursal in sucursales %}
+                <tr>
+                    <td>{{ sucursal.libro }}</td>
+                    <td>{{ sucursal.sucursal }}</td>
+                </tr>
             {% endfor %}
         </tbody>
     </table>
-        
-    <a href="{% url 'index' %}"><button>Volver al inicio</button></a>
-    
-    
 
+    
 {% endblock contenido %}
