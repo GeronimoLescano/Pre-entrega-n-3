@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+
+
+{% block contenido %}
+    <h1>Usuarios</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Direccion</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for usuario in usuarios  %}
+                <tr>
+                    <td>{{usuario.nombre}}</td>
+                    <td>{{usuario.apellido}}</td>
+                    <td>{{usuario.email}}</td>
+                    <td>{{usuario.direccion}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+        
+    
+    <a href="{% url 'index' %}"><button>Volver al inicio</button></a>
+    
+    
+
+{% endblock contenido %}

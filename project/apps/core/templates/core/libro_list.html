@@ -1,0 +1,27 @@
+{% extends 'core/base.html' %}
+
+
+{% block contenido %}
+    <h1>Libros</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Autor</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for libro in libros  %}
+                <tr>
+        
+                    <td>{{libro.titulo}}</td>
+                    <td>{{libro.autor}}</td>
+            
+            
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{% url 'index' %}"><button>Volver al inicio</button></a>
+{% endblock contenido %}

@@ -1,0 +1,13 @@
+{% extends 'core/base.html' %}
+
+{% block contenido %}
+    <h1>Bienvenidos a la Bibloteca Patagonica</h1>
+    <button><a href="{% url 'libro_list' %}">Ver Libros</a></button>
+    <button><a href="{% url 'libro_form' %}">Crear Libro</a></button>
+    <button><a href="{% url 'usuario_list' %}">Ver Usuarios</a></button>
+    <button><a href="{% url 'usuario_form' %}">Crear Usuario</a></button>
+    <button><a href="{% url 'sucursal_list' %}">Ver Sucursales</a></button>
+    <button><a href="{% url 'biblioteca_list' %}">Ver Bibloteca</a></button>
+    <button><a href="{% url 'tomar_libro_form' %}">Elegir libro</a></button>
+    
+{% endblock contenido %}

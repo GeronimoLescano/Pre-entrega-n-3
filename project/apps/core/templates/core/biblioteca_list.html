@@ -1,0 +1,26 @@
+{% extends 'core/base.html' %}
+
+{% block contenido %}
+    <h1>Biblioteca</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Usuario</th>
+                <th>Libro</th>
+                <th>Sucursal</th>
+                <th>Fecha de Préstamo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for biblioteca in bibliotecas %}
+                <tr>
+                    <td>{{ biblioteca.usuario }}</td>
+                    <td>{{ biblioteca.libro }}</td>
+                    <td>{{ biblioteca.sucursal }}</td>
+                    <td>{{ biblioteca.fecha_prestamo }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'index' %}"><button>Volver al inicio</button></a>
+{% endblock contenido %}

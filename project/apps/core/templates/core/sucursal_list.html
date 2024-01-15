@@ -1,0 +1,26 @@
+{% extends 'core/base.html' %}
+
+
+{% block contenido %}
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Libro</th>
+                <th>Sucursal</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for sucursal in sucursales  %}
+            <tr>
+                <td>{{sucursal.libro}}</td>
+                <td>{{sucursal.sucursales}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+        
+    <a href="{% url 'index' %}"><button>Volver al inicio</button></a>
+    
+    
+
+{% endblock contenido %}

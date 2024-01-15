@@ -1,0 +1,14 @@
+{% extends 'core/base.html' %}
+
+{% block contenido %}
+    <h2>Tomar un libro</h2>
+
+    <form method="post" action="{% url 'tomar_libro_form' %}">
+        {% csrf_token %}
+        
+        {{ form.as_p }}
+
+        <button type="submit">Tomar Libro</button>
+    </form>
+    <a href="{% url 'index' %}"><button>Volver al inicio</button></a>
+{% endblock contenido %}
